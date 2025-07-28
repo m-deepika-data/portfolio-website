@@ -1,11 +1,7 @@
 /* ----- NAVIGATION BAR FUNCTION ----- */
 function myMenuFunction() {
-  var menuBtn = document.getElementById("myNavMenu");
-  if (menuBtn.className === "nav-menu") {
-    menuBtn.className += " responsive";
-  } else {
-    menuBtn.className = "nav-menu";
-  }
+  const menu = document.getElementById("myNavMenu");
+  menu.classList.toggle("responsive");
 }
 // smoothly scroll to the About section.  
 function scrollToAbout() {
@@ -92,6 +88,16 @@ function scrollActive() {
   });
 }
 
+// Auto-close the mobile nav when any link is clicked
+document.querySelectorAll('.nav-link').forEach(link => {
+  link.addEventListener('click', () => {
+    const navMenu = document.getElementById("myNavMenu");
+    if (window.innerWidth <= 900 && navMenu.classList.contains("responsive")) {
+      navMenu.classList.remove("responsive");
+    }
+  });
+});
+
 // Attach scroll listener
 window.addEventListener("scroll", scrollActive);
 
@@ -138,18 +144,12 @@ goTopBtn.addEventListener("click", () => {
 
 // Work ex toggle feature
 
-  // function toggleDetails(id) {
-  //   const detailSection = document.getElementById(id);
-  //   detailSection.style.display = detailSection.style.display === 'block' ? 'none' : 'block';
-  // }
 function toggleDetails(id, el) {
   const detailSection = document.getElementById(id);
   const isVisible = detailSection.style.display === 'block';
   detailSection.style.display = isVisible ? 'none' : 'block';
   el.textContent = (isVisible ? '▶ ' : '▼ ') + el.textContent.slice(2);
 }
-
-
 
 //Project
 document.getElementById("excelBtn").addEventListener("click", function () {
@@ -191,30 +191,66 @@ menuToggle.addEventListener('click', () => {
 
 
 //project toggle
-function toggleProjects(skill) {
+// project toggle
+function toggleProjects(skill, el) {
   const allSections = document.querySelectorAll('.projects-container');
-  let selectedSection = null;
+  const allTabs = document.querySelectorAll('.project-skill');
+  const targetSection = document.getElementById('projects-' + skill);
+  const isAlreadyActive = el.classList.contains('active-tab');
+  const skillsContainer = document.getElementById('projectSkills');
 
+  // Reset compact layout
+  skillsContainer.classList.remove('compact');
+
+  // Hide all project sections
   allSections.forEach(section => {
-    if (section.id === 'projects-' + skill) {
-      const isVisible = section.classList.contains('show');
-      section.classList.remove('show');
-      section.style.display = 'none';
-
-      if (!isVisible) {
-        section.style.display = 'flex';
-        setTimeout(() => section.classList.add('show'), 10);
-        selectedSection = section;
-      }
-    } else {
-      section.classList.remove('show');
-      section.style.display = 'none';
-    }
+    section.classList.remove('show');
+    section.style.display = 'none';
   });
 
-  if (selectedSection) {
-    selectedSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  // Remove highlight from all skill tabs
+  allTabs.forEach(btn => btn.classList.remove('active-tab'));
+
+  if (!isAlreadyActive) {
+    // Show the clicked section
+    if (targetSection) {
+      targetSection.style.display = 'flex';
+      setTimeout(() => targetSection.classList.add('show'), 10);
+
+      // ✅ Scroll to just above the skill buttons
+      const yOffset = -100; // adjust as needed based on header height
+      const y = skillsContainer.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+
+    // Add compact layout + highlight
+    el.classList.add('active-tab');
+    skillsContainer.classList.add('compact');
   }
+}
+
+
+
+// Auto-close menu on link click (mobile view)
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    const menu = document.getElementById("myNavMenu");
+    if (menu.classList.contains("responsive")) {
+      menu.classList.remove("responsive");
+    }
+  });
+});
+// Close the mobile menu when a nav link is clicked
+document.querySelectorAll('.nav-link').forEach(link => {
+  link.addEventListener('click', () => {
+    const navMenu = document.getElementById("myNavMenu");
+    if (navMenu.classList.contains("responsive")) {
+      navMenu.classList.remove("responsive");
+    }
+  });
+});
+function myMenuFunction() {
+  document.getElementById("myNavMenu").classList.toggle("responsive");
 }
 
 console.log("JS file is loaded");

@@ -3,23 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio || Deepika</title>
+<!-- Icons & Fonts -->
     <!-- --------- UNICONS ---------- -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
-    <!-- --------- CSS ---------->
-    <link rel="stylesheet" href="style.css">
     <!-- --------- FAVICON ---------- -->
     <link rel="shortcut icon" href="assets/images/favicon-32x32.png" type="image/x-icon">
-    <!-- JS ------------->
-    <script src="main.js" defer></script>
     <!-- Font  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <title>Portfolio || Deepika</title>
+    <!-- JS ------------->
+    <script src="main.js" defer></script>
+    <!-- --------- CSS ---------->
+    <link rel="stylesheet" href="style.css">
+    
 </head>
-<button id="goTopBtn" title="Go to top">
-  <i class="uil uil-angle-up"></i>
-</button>
 <body>
+  <!-- Go to Top Button --> 
+      <button id="goTopBtn" title="Go to top">
+        <i class="uil uil-angle-up"></i>
+      </button>
    <div class="container">
     <!-- --------------- HEADER --------------- -->
       <nav id="header">
@@ -85,7 +88,7 @@
                 <div class="icon" onclick = "location.href = 'tel: +91 8015287734';"><i class="uil uil-phone-volume"></i></a></div>
                 <div class="icon" onclick = "window.open('https://www.linkedin.com/in/mdeepika/','_blank','noopener noreferrer');" ><i class="uil uil-linkedin-alt"></i></div>
                 <div class="icon" onclick = "location.href='mailto: deepikaparthiban10@gmail.com';"><i class="uil uil-envelope-alt"></i></div>
-                <div class="icon" onclick = "window.open('https://github.com/dashboard','_blank','noopener noreferrer');"><i class="uil uil-github-alt"></i></div>
+                <div class="icon" onclick = "window.open('https://github.com/m-deepika-data/','_blank','noopener noreferrer');"><i class="uil uil-github-alt"></i></div>
             </div>
           </div>
           <!-- <div class="featured-image">
@@ -137,7 +140,7 @@
 
     <!-- Right: Work Experience -->
     <div class="about-work">
-      <h3>💼 Work Experience</h3>
+      <h3>💼 Work Experience</h3> 
      <div id="workex-placeholder" class="workex-placeholder" >
     Select a company to know more about work experience.
   </div>
@@ -209,12 +212,12 @@
   </div>
 </section>
       <!-- Skills -->
-      <section id="skills" class="skills-section">
+ <section id="skills" class="skills-section">
       <div class="top-header">
         <h1 class="section-heading">Skills</h1>
       </div>
       <div class="skills-grid">
-<div class="skills-grid">
+    <div class="skills-grid">
         <span class="skill">Python</span>
         <span class="skill">Power BI</span>
         <span class="skill">Tableau</span>
@@ -227,7 +230,7 @@
         <span class="skill">Excellent Communication</span>
         <span class="skill">Leadership</span>
         <span class="skill">Power Query</span>
-      </div>
+    </div>
       <!--<a href="#certificate"
         ><i class="fa-solid fa-angles-down arrow-icon"></i
       ></a>-->
@@ -243,15 +246,19 @@
 
   <div class="section">
 
-    <div class="project-skills">
-      <div class="project-skill" onclick="toggleProjects('excel')">
-        <img src="assets\Images\Icons\excel.svg" alt="Excel" class="skill-icon" />Excel</div>
-      <div class="project-skill" onclick="toggleProjects('sql')">
-        <img src="assets/Images/Icons/Sqldb.png" alt="SQL" class="skill-icon" />SQL</div>
-      <div class="project-skill" onclick="toggleProjects('powerbi')">
-        <img src="assets/Images/Icons/powerbi.png" alt="Power BI" class="skill-icon" />Power BI</div>
-      <div class="project-skill" onclick="toggleProjects('python')">
-        <img src="assets/Images/Icons/python.png" alt="Python" class="skill-icon" />Python</div>
+    <div id="projectSkills" class="project-skills">
+      <div class="project-skill" onclick="toggleProjects('excel', this)">
+  <img src="assets/Images/Icons/excel.svg" alt="Excel" class="skill-icon" />Excel
+</div>
+<div class="project-skill" onclick="toggleProjects('sql', this)">
+  <img src="assets/Images/Icons/Sqldb.png" alt="SQL" class="skill-icon" />SQL
+</div>
+<div class="project-skill" onclick="toggleProjects('powerbi', this)">
+  <img src="assets/Images/Icons/powerbi.png" alt="Power BI" class="skill-icon" />Power BI
+</div>
+<div class="project-skill" onclick="toggleProjects('python', this)">
+  <img src="assets/Images/Icons/python.png" alt="Python" class="skill-icon" />Python
+</div>
       <!-- Add more skills here -->
     </div>
       <div id="project-placeholder" class="project-placeholder">
@@ -416,7 +423,7 @@
       <div class="icon" onclick="location.href='tel:+918015287734';"><i class="uil uil-phone-volume"></i></div>
       <div class="icon" onclick="window.open('https://www.linkedin.com/in/mdeepika/','_blank','noopener noreferrer');"><i class="uil uil-linkedin-alt"></i></div>
       <div class="icon" onclick="location.href='mailto:deepikaparthiban10@gmail.com';"><i class="uil uil-envelope-alt"></i></div>
-      <div class="icon" onclick="window.open('https://github.com/dashboard','_blank','noopener noreferrer');"><i class="uil uil-github-alt"></i></div>
+      <div class="icon" onclick="window.open('https://github.com/m-deepika-data','_blank','noopener noreferrer');"><i class="uil uil-github-alt"></i></div>
     </div>
 
     <div class="bottom-footer">
@@ -429,9 +436,8 @@
        <!-- ----- SCROLL REVEAL JS Link----- -->
     <script src="https://unpkg.com/scrollreveal"></script>
     <!-- ----- MAIN JS ----- -->
-    <script src="assets/js/main.js"></script>
+    <script src="main.js"></script>
     <!-- Form Submission  -->
- <!-- JavaScript -->
 <script>
   function handleSubmit(event) {
     event.preventDefault();
@@ -461,29 +467,5 @@
     return false;
   }
 </script>
-<!-- Project Toggle on and off -->
-
-<script>
- function toggleProject(button, category) {
-  const cards = document.querySelectorAll('.project-card');
-  const isAlreadyVisible = Array.from(cards).some(card => 
-    card.classList.contains(category) && card.classList.contains('show')
-  );
-
-  cards.forEach(card => {
-    card.classList.remove('show');
-  });
-
-  if (!isAlreadyVisible) {
-    cards.forEach(card => {
-      if (card.classList.contains(category)) {
-        card.classList.add('show');
-      }
-    });
-  }
-}
-</script>
-
-
 </body>
 </html>
