@@ -216,3 +216,5 @@ function toggleProjects(skill) {
     selectedSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 }
+
+console.log("JS file is loaded");
