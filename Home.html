@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- --------- UNICONS ---------- -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <!-- --------- CSS ---------- -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- --------- FAVICON ---------- -->
+    <link rel="shortcut icon" href="assets/images/favicon-32x32.png" type="image/x-icon">
+    <!-- Font  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <title>Portfolio || Deepika</title>
+</head>
+<button id="goTopBtn" title="Go to top">
+  <i class="uil uil-angle-up"></i>
+</button>
+<body>
+   <div class="container">
+    <!-- --------------- HEADER --------------- -->
+      <nav id="header">
+        <div class="nav-logo">
+            <p class="nav-name">Deepika</p>
+        </div>
+        <div class="nav-menu" id="myNavMenu">
+            <ul class="nav_menu_list">
+                <li class="nav_list">
+                    <a href="#home" class="nav-link active-link">Home</a>
+                    <div class="circle"></div>
+                </li>
+                <li class="nav_list">
+                    <a href="#about" class="nav-link">About</a>
+                    <div class="circle"></div>
+                </li>
+                 <li class="nav_list">
+                    <a href="#skills" class="nav-link">Skills</a>
+                    <div class="circle"></div>
+                </li>
+                <li class="nav_list">
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <div class="circle"></div>
+                </li>
+                <li class="nav_list">
+                    <a href="#contact" class="nav-link">Contact</a>
+                    <div class="circle"></div>
+                </li>
+            </ul>
+        </div>
+        <div class="nav-button">
+            <button class="btn" onclick = "window.open('Deepika M_DA Resume.pdf','_blank');">Download CV <i class="uil uil-file-alt"></i></button>
+        </div>
+        <div class="nav-menu-btn">
+            <i class="uil uil-bars" onclick="myMenuFunction()"></i>
+        </div>
+      </nav>
+
+    
+    <!-- -------------- MAIN ---------------- -->
+    <main class="wrapper">
+       <!-- -------------- FEATURED BOX ---------------- -->
+       <section class="featured-box" id="home">
+          <div class="featured-text">
+            <div class="featured-text-card">
+                <span>Deepika Muniasamy</span>
+            </div>
+            <div class="featured-name">
+                <p>Hello!<p><span class="typedText"></span></p>
+            </div>
+            <div class="featured-text-info">
+                <p>
+                    <!-- placeholder for any text to display -->
+                     
+                </p>
+            </div>
+            <div class="featured-text-btn">
+                <button class="btn blue-btn" onclick="scrollToAbout()">Explore More</button>
+                <!-- <a href="#about" class="btn blue-btn">Explore More</a> -->
+                <button class="btn" onclick = "window.open('Deepika M_DA Resume.pdf','_blank');">Download CV<i class="uil uil-file-alt"></i></button>
+            </div>
+            <div class="social_icons">
+                <div class="icon" onclick = "location.href = 'tel: +91 8015287734';"><i class="uil uil-phone-volume"></i></a></div>
+                <div class="icon" onclick = "window.open('https://www.linkedin.com/in/mdeepika/','_blank','noopener noreferrer');" ><i class="uil uil-linkedin-alt"></i></div>
+                <div class="icon" onclick = "location.href='mailto: deepikaparthiban10@gmail.com';"><i class="uil uil-envelope-alt"></i></div>
+                <div class="icon" onclick = "window.open('https://github.com/dashboard','_blank','noopener noreferrer');"><i class="uil uil-github-alt"></i></div>
+            </div>
+          </div>
+          <!-- <div class="featured-image">
+            <div class="image">
+                <img src="assets/images/Deepika.jpg" alt="Deepika">
+            </div>
+          </div> -->
+          <div class="scroll-icon-box">
+            <a href="#about" class="scroll-btn">
+                <i class="uil uil-mouse-alt"></i>
+                <p>Scroll Down</p>
+            </a>
+          </div>
+       </section>
+       <!-- -------------- ABOUT BOX ---------------- -->
+     <section id="about" class="section">
+  <div class="top-header">
+    <h1>About Me</h1>
+  </div>
+
+  <div class="about-content-row">
+    <!-- Left: About Me -->
+    <div class="about-bio">
+      <div class="about-info">
+        <h3>👩‍💻 Who I Am</h3>
+        <div class="about-content-row">
+            <div class="about-bio">
+                <p>I'm Deepika Muniasamy, a finance and analytics professional with over 4 years of experience across banking, finance operations, and analytics
+                    I hold a postgraduate specialization in Finance & Analytics and an undergraduate degree in Engineering, 
+                    I began my career in banking and gradually transitioned into roles across finance operations and analytics. Over the past 4+ years, 
+                    I’ve developed a well-rounded understanding of business processes and data systems.
+                    My journey began in finance, but I’ve always been drawn to data and automation.</p>
+                <p>
+                    Currently, I'm upskilling in Data Analytics, Process Automation, and Microsoft's Power Platform—
+                    to build impactful and scalable digital solutions that enhance efficiency and insight.
+                </p>
+      
+    </div>
+        </div>
+
+        <p class="about-cta"><em>Let’s connect — I’m open to collaboration and new opportunities!</em></p>
+        <div class="about-btn">
+          <button class="btn" onclick="window.open('Deepika M_DA Resume.pdf','_blank');">
+            Download CV <i class="uil uil-import"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Work Experience -->
+    <div class="about-work">
+      <h3>💼 Work Experience</h3>
+     <div id="workex-placeholder" class="workex-placeholder" >
+    Select a company to know more about work experience.
+  </div>
+      <ul class="experience-list">
+        
+        <li><strong class="expand-toggle" onclick="toggleDetails('accenture-details',this)"> ▶ Accenture Solutions Pvt Ltd</span></strong><br><span>Indirect Tax Analyst | Sept 2022 – Present</span></li>
+        <div id="accenture-details" class="work-details">
+        <ul>
+
+       <ul>
+          <li>Currently working in the Record to Report (R2R) team with a focus on indirect tax processing and compliance.</li>
+          <li>Prepare and review supplier withholding tax on a monthly basis.</li>
+          <li>Manage intercompany accounts payable and receivable, ensuring accurate reconciliation.</li>
+          <li>Assist with month-end and year-end closings to support financial reporting accuracy.</li>
+          <li>Designed Excel dashboards to identify inefficiencies and enhance reporting quality.</li>
+          <li>Coordinate with internal teams and external stakeholders on indirect tax matters.</li>
+          <li>Support tax return preparation and monthly tax provision recording.</li>
+          <li>Experienced in ERP systems including SAP, Lawson, and Oracle.</li>
+        </ul>
+        </div>
+        <li><strong class="expand-toggle" onclick="toggleDetails('neeyamo-details',this)">▶ Neeyamo Enterprise Solutions</strong><br><span>Finance Executive | Mar 2022 – Sep 2022</span></li>
+        <div id="neeyamo-details" class="work-details">
+        <ul>
+          <li>Managed end-to-end invoicing for 50+ payroll clients, generating 600+ invoices monthly worth over $1Mn.</li>
+          <li>Resolved client billing queries, tracked expenses, and ensured accurate MIS through monthly Tally reconciliations.</li>
+          <li>Collaborated with cross-functional teams on audits and process improvements.</li>
+          <li>Created a Variance Report Dashboard to improve billing insights and tracking.</li>
+          <li>Worked with the automation team to streamline invoice generation.</li>
+          <li>Developed a macro-based solution that improved invoice delivery efficiency by 20%.</li>
+        </ul>
+        </div>
+        <li><strong class="expand-toggle" onclick="toggleDetails('blackbuck-details',this)">▶ Blackbuck Private Ltd</strong><br><span>MIS Analyst | Oct 2018 – Feb 2019</span></li>
+        <div id="blackbuck-details" class="work-details">
+        <ul>
+          <li>Supported the Financial Planning and Analysis team in reducing Accounts Receivable (AR) days.</li>
+          <li>Analyzed cross-functional business data to provide actionable insights to senior management.</li>
+          <li>Led monthly collections tracking and defined key performance metrics.</li>
+          <li>Ensured accuracy and consistency of financial data across reports.</li>
+          <li>Developed a variance monitoring model for tracking collection performance.</li>
+          <li>Introduced a credit summary report that significantly reduced credit failure rates.</li>
+        </ul>
+        </div>
+        <li><strong class="expand-toggle" onclick="toggleDetails('cub-details',this)">▶ City Union Bank Pvt Ltd</strong><br><span>Senior Associate | Oct 2017 – Oct 2018</span></li>
+        <div id="cub-details" class="work-details">
+        <ul>
+          <li>Handled all branch transactions within the prerogatives (CBS TCS Bancs) like Account opening, KYC Compliance, claim settlements, Cheque clearing, Payment Processing, AML monitoring, Cash Handling etc.,</li>	
+          <li>Handled key HNI Customers of the bank.</li>
+          <li>Cultivated and strengthened relationships with new clients and educated clients on account services and capabilities.</li>
+          <li>Provided necessary coaching to Tellers and junior clerks in terms of system banking operations.</li>
+          <li>Analyse applicants' financial status, credit history and property evaluations to determine feasibility of granting loans.</li>
+
+        </ul>
+        </div>
+      </ul>
+      <div class="about-education" style="margin-top: 40px;">
+  <h3>🎓 Education</h3>
+  <ul class="experience-list">
+    <li>
+      <strong>Postgraduate Diploma in Management (Finance and Analytics)</strong><br />
+      <span>2015 – 2017</span>
+    </li>
+    <li>
+      <strong>Bachelor of Engineering in Electrical and Electronics Engineering</strong><br />
+      <span>2011 – 2015</span>
+    </li>
+  </ul>
+</div>
+    </div>
+  </div>
+</section>
+      <!-- Skills -->
+      <section id="skills" class="skills-section">
+      <div class="top-header">
+        <h1 class="section-heading">Skills</h1>
+      </div>
+      <div class="skills-grid">
+<div class="skills-grid">
+        <span class="skill">Python</span>
+        <span class="skill">Power BI</span>
+        <span class="skill">Tableau</span>
+        <span class="skill">Advanced Excel</span>
+        <span class="skill">Power Point</span>
+        <span class="skill">MS SQL Server</span>
+        <span class="skill">Client–Service Excellence</span>
+        <span class="skill">Critical thinking</span>
+        <span class="skill">Time management</span>
+        <span class="skill">Excellent Communication</span>
+        <span class="skill">Leadership</span>
+        <span class="skill">Power Query</span>
+      </div>
+      <!--<a href="#certificate"
+        ><i class="fa-solid fa-angles-down arrow-icon"></i
+      ></a>-->
+    </section>
+<!-- Projects Section -->
+<section id="projects" class="section">
+  <div class="top-header">
+    <h1 class="section-heading">Projects</h1>
+    <p class="section-intro">
+      Explore my portfolio showcasing skills in data analysis, visualization, and automation.
+    </p>
+  </div>
+
+  <div class="section">
+
+    <div class="project-skills">
+      <div class="project-skill" onclick="toggleProjects('excel')">
+        <img src="assets\Images\Icons\excel.svg" alt="Excel" class="skill-icon" />Excel</div>
+      <div class="project-skill" onclick="toggleProjects('sql')">
+        <img src="assets/Images/Icons/Sqldb.png" alt="SQL" class="skill-icon" />SQL</div>
+      <div class="project-skill" onclick="toggleProjects('powerbi')">
+        <img src="assets/Images/Icons/powerbi.png" alt="Power BI" class="skill-icon" />Power BI</div>
+      <div class="project-skill" onclick="toggleProjects('python')">
+        <img src="assets/Images/Icons/python.png" alt="Python" class="skill-icon" />Python</div>
+      <!-- Add more skills here -->
+    </div>
+      <div id="project-placeholder" class="project-placeholder">
+    Select a skill above to view projects.
+  </div>
+
+    <!-- Excel Projects -->
+    <div class="projects-container" id="projects-excel">
+      <div class="project-card">
+        <div class="project-thumbnail">
+          <img src="assets/Images/adventure-works-logo.png" alt="Excel Project Thumbnail">
+        </div>
+        <div class="project-content">
+          <div class="project-title">Excel Dashboard for Sales Analysis</div>
+          <div class="project-desc">Built a two-page interactive dashboard using MS Excel with Power Query and Power Pivot on the AdventureWorks dataset. The project focuses on sales performance trends, profitability insights, top products/customers, and demographic-based analysis using custom visuals, DAX, and macros.</div>
+          <div class="project-buttons">
+            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7141956322534580224/" target="_blank">View Project Engagement in Linkedin</a>
+           <!-- <a href="project-excel.html"_blank">View Project summary</a>  -->
+            <a href="https://github.com/m-deepika-data/Projects-/tree/main/Excel/AdventureWorks%20-%20Excel%20Dashboard" target="_blank">View Project on GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SQL Projects -->
+    <div class="projects-container" id="projects-sql">
+      <div class="project-card">
+        <div class="project-thumbnail">
+          <img src="assets/Images/Cerdit-Card.jpg" alt="SQL Project Thumbnail">
+        </div>
+        <div class="project-content">
+          <div class="project-title">Spend Analysis Using SQL</div>
+          <div class="project-desc">This project is based on a dataset downloaded from Kaggle, which provides insights into credit card spending patterns in India. It served as an excellent hands-on case study to build a strong foundation in advanced SQL concepts.</div>
+          <div class="project-buttons">
+            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7141923205190959105/" target="_blank">View Project Engagement</a>
+            <a href="https://github.com/m-deepika-data/Projects-/tree/main/SQL" target="_blank">View Project on GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Power BI Projects -->
+    <div class="projects-container" id="projects-powerbi">
+      <div class="project-card">
+        <div class="project-thumbnail">
+          <img src="assets/Images/Business-Insights-logo.png" alt="Power BI Project Thumbnail">
+        </div>
+        <div class="project-content">
+          <div class="project-title">Business Dashboard in Power BI</div>
+          <div class="project-desc">A comprehensive Power BI dashboard built for AtliQ Hardwares to track sales, finance, marketing, supply chain, and forecast accuracy—enabling data-driven decisions across the organization.</div>
+          <div class="project-buttons">
+            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7238998418734358529/" target="_blank">View Project Engagement</a>
+            <a href="https://github.com/m-deepika-data/Projects-/tree/main/Power%20BI/Business%20Insights%20360%20-%20Atliq%20PBI%20Dashboard" target="_blank">View project on GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Python Projects -->
+    <div class="projects-container" id="projects-python">
+      <div class="project-card">
+        <div class="project-thumbnail">
+          <img src="python-thumbnail.jpg" alt="Python Project Thumbnail">
+        </div>
+        <div class="project-content">
+          <div class="project-title">Data Cleaning Script with Python</div>
+          <div class="project-desc">Automated a messy data cleaning pipeline using pandas and regex to prepare datasets for analysis.</div>
+          <div class="project-buttons">
+            <a href="project-python.html" target="_blank">View Project</a>
+            <a href="https://github.com/yourprofile/python-data-cleaning" target="_blank">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ 
+</section>
+
+<!-- -------------- CONTACT BOX ---------------- -->
+      <section class="contact-section" id="contact">
+  <div class="top-header">
+    <h1>Get in touch</h1>
+    <span>Below are the details to reach out to me!</span>
+  </div>
+
+  <div class="contact-content" style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 30px;">
+    
+    <!-- LEFT: Contact Info -->
+    <div class="contact-info" style="flex: 1; min-width: 300px;">
+      <h2>Find Me <i class="uil uil-corner-right-down"></i></h2>
+      <p><i class="uil uil-envelope"></i> 
+        <a href="mailto:deepikaparthiban10@gmail.com">deepikaparthiban10@gmail.com</a>
+      </p>
+      <p><i class="uil uil-phone"></i> 
+        <a href="tel:+918015287734">+91 801 528 7734</a>
+      </p>
+      <p><i class="uil uil-linkedin-alt"></i> 
+        <a href="https://www.linkedin.com/in/mdeepika/" target="_blank">LinkedIn Profile</a>
+      </p>
+      <p><i class="uil uil-github-alt"></i> 
+        <a href="https://github.com/m-deepika-data" target="_blank">GitHub Profile</a>
+      </p>
+    </div>
+
+    <!-- RIGHT: Contact Form -->
+    <div class="col" style="flex: 1; min-width: 300px;">
+  <form id="contact-form"
+        action="https://formsubmit.co/deepikaparthiban10@gmail.com" 
+        method="POST" 
+        onsubmit="return handleSubmit(event)" 
+        class="form-control">
+
+    <div class="form-inputs">
+      <input type="text" class="input-field" name="name" placeholder="Name" required>
+      <input type="email" class="input-field" name="email" placeholder="Email" required>
+    </div>
+
+    <div class="text-area">
+      <textarea name="message" placeholder="Type your message here to directly reach my inbox" required></textarea>
+    </div>
+
+    <!-- Optional Hidden Fields -->
+    <input type="hidden" name="_subject" value="New Message from Portfolio">
+    <input type="hidden" name="_captcha" value="false">
+
+    <div class="form-button">
+      <button type="submit" class="btn">Send <i class="uil uil-message"></i></button>
+    </div>
+  </form>
+
+  <!-- Thank You Message -->
+  <div id="thank-you" style="display: none; color: green; margin-top: 20px;">
+    ✅ Thank you for your message! I’ll get back to you soon.
+  </div>
+</div>
+  </div>
+
+    <!-- <div class="social-icons">
+      <div class="icon" onclick="location.href='tel:+918015287734';">
+        <i class="uil uil-phone-volume"></i>
+      </div>
+      <div class="icon" onclick="window.open('https://www.linkedin.com/in/mdeepika/', '_blank', 'noopener noreferrer');">
+        <i class="uil uil-linkedin-alt"></i>
+      </div>
+      <div class="icon" onclick="location.href='mailto:deepikaparthiban10@gmail.com';">
+        <i class="uil uil-envelope-alt"></i>
+      </div>
+      <div class="icon" onclick="window.open('https://github.com/dashboard', '_blank', 'noopener noreferrer');">
+        <i class="uil uil-github-alt"></i>
+      </div>
+    </div> -->
+  </div>
+
+
+<footer>
+    <div class="top-footer">
+      <p>Deepika Muniasamy</p>
+    </div>
+
+    <div class="footer-social-icons">
+      <div class="icon" onclick="location.href='tel:+918015287734';"><i class="uil uil-phone-volume"></i></div>
+      <div class="icon" onclick="window.open('https://www.linkedin.com/in/mdeepika/','_blank','noopener noreferrer');"><i class="uil uil-linkedin-alt"></i></div>
+      <div class="icon" onclick="location.href='mailto:deepikaparthiban10@gmail.com';"><i class="uil uil-envelope-alt"></i></div>
+      <div class="icon" onclick="window.open('https://github.com/dashboard','_blank','noopener noreferrer');"><i class="uil uil-github-alt"></i></div>
+    </div>
+
+    <div class="bottom-footer">
+      <p>Copyright &copy; <a href="#home" style="text-decoration: none;">Deepika Muniasamy</a> - All rights reserved</p>
+    </div>
+  </footer>
+</section>
+    <!-- ----- TYPING JS Link ----- -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+       <!-- ----- SCROLL REVEAL JS Link----- -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- ----- MAIN JS ----- -->
+    <script src="assets/js/main.js"></script>
+    <!-- Form Submission  -->
+ <!-- JavaScript -->
+<script>
+  function handleSubmit(event) {
+    event.preventDefault();
+    const form = document.getElementById('contact-form');
+    const thankYouMessage = document.getElementById('thank-you');
+
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: {
+        'Accept': 'application/json'
+      }
+    })
+    .then(response => {
+      if (response.ok) {
+        form.reset();
+        thankYouMessage.style.display = 'block';
+      } else {
+        alert('Oops! Something went wrong. Please try again.');
+      }
+    })
+    .catch(error => {
+      console.error(error);
+      alert('There was an error submitting the form.');
+    });
+
+    return false;
+  }
+</script>
+<!-- Project Toggle on and off -->
+
+<script>
+ function toggleProject(button, category) {
+  const cards = document.querySelectorAll('.project-card');
+  const isAlreadyVisible = Array.from(cards).some(card => 
+    card.classList.contains(category) && card.classList.contains('show')
+  );
+
+  cards.forEach(card => {
+    card.classList.remove('show');
+  });
+
+  if (!isAlreadyVisible) {
+    cards.forEach(card => {
+      if (card.classList.contains(category)) {
+        card.classList.add('show');
+      }
+    });
+  }
+}
+</script>
+
+
+</body>
+</html>
